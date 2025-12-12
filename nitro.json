@@ -1,0 +1,23 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": [
+    "nitroorb"
+  ],
+  "ios": {
+    "iosModuleName": "NitroOrb"
+  },
+  "android": {
+    "androidNamespace": [
+      "nitroorb"
+    ],
+    "androidCxxLibName": "NitroOrb"
+  },
+  "autolinking": {
+    "NitroOrb": {
+      "swift": "HybridNitroOrb"
+    }
+  },
+  "ignorePaths": [
+    "**/node_modules"
+  ]
+}
