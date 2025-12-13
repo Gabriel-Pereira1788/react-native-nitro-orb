@@ -4,10 +4,34 @@ import type {
   HybridViewMethods,
 } from 'react-native-nitro-modules'
 
+type PresetType =
+  | 'mystic'
+  | 'nature'
+  | 'sunset'
+  | 'ocean'
+  | 'minimal'
+  | 'cosmic'
+  | 'fire'
+  | 'arctic'
+  | 'shadow'
+
 export interface NitroOrbProps extends HybridViewProps {
-   isRed: boolean
+  preset?: PresetType
+  speed?: number
+  glowColor?: string
+  backgroundColors?: string[]
+  particleColor?: string
+  showWavyBlobs?: boolean
+  showParticles?: boolean
+  showGlowEffects?: boolean
+  showShadow?: boolean
+  coreGlowItensity?: number
 }
 
 export interface NitroOrbMethods extends HybridViewMethods {}
 
-export type NitroOrb = HybridView<NitroOrbProps, NitroOrbMethods, { ios: 'swift' }>
+export type NitroOrb = HybridView<
+  NitroOrbProps,
+  NitroOrbMethods,
+  { ios: 'swift' }
+>

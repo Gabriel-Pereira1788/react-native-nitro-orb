@@ -1,13 +1,16 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { NitroOrb } from 'react-native-nitro-orb';
+import React, { useState } from 'react'
+import { View, StyleSheet, Button } from 'react-native'
+import { NitroOrb } from 'react-native-nitro-orb'
 
 function App(): React.JSX.Element {
+  const [isGenerating, setIsGenerating] = useState(false)
   return (
     <View style={styles.container}>
-        <NitroOrb isRed={true} style={styles.view} testID="nitro-orb" />
+      <NitroOrb preset='minimal' speed={20} style={styles.view} testID="nitro-orb" />
+
+      <Button title="Generate" onPress={() => setIsGenerating(prev => !prev)} />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -18,7 +21,8 @@ const styles = StyleSheet.create({
   },
   view: {
     width: 200,
-    height: 200
-  }});
+    height: 200,
+  },
+})
 
-export default App;
+export default App

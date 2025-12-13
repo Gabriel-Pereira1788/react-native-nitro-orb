@@ -1,0 +1,19 @@
+{
+  "uiViewClassName": "NitroOrb",
+  "supportsRawText": false,
+  "bubblingEventTypes": {},
+  "directEventTypes": {},
+  "validAttributes": {
+    "preset": true,
+    "speed": true,
+    "glowColor": true,
+    "backgroundColors": true,
+    "particleColor": true,
+    "showWavyBlobs": true,
+    "showParticles": true,
+    "showGlowEffects": true,
+    "showShadow": true,
+    "coreGlowItensity": true,
+    "hybridRef": true
+  }
+}
