@@ -43,11 +43,11 @@
   "workspaces": [
     "example"
   ],
-  "repository": "https://github.com/gabriel-pereira1788/react-native-nitro-orb.git",
+  "repository": "https://github.com/Gabriel-Pereira1788/react-native-nitro-orb.git",
   "author": "Gabriel-Pereira1788",
   "license": "MIT",
-  "bugs": "https://github.com/gabriel-pereira1788/react-native-nitro-orb/issues",
-  "homepage": "https://github.com/gabriel-pereira1788/react-native-nitro-orb#readme",
+  "bugs": "https://github.com/Gabriel-Pereira1788/react-native-nitro-orb/issues",
+  "homepage": "https://github.com/Gabriel-Pereira1788/react-native-nitro-orb#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
