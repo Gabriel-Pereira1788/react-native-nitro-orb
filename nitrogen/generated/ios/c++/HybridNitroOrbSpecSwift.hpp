@@ -81,6 +81,13 @@ namespace margelo::nitro::nitroorb {
     inline void setGlowColor(const std::optional<std::string>& glowColor) noexcept override {
       _swiftPart.setGlowColor(glowColor);
     }
+    inline std::optional<double> getSize() noexcept override {
+      auto __result = _swiftPart.getSize();
+      return __result;
+    }
+    inline void setSize(std::optional<double> size) noexcept override {
+      _swiftPart.setSize(size);
+    }
     inline std::optional<std::vector<std::string>> getBackgroundColors() noexcept override {
       auto __result = _swiftPart.getBackgroundColors();
       return __result;

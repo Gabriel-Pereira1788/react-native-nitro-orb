@@ -48,6 +48,7 @@ namespace margelo::nitro::nitroorb::views {
     CachedProp<std::optional<PresetType>> preset;
     CachedProp<std::optional<double>> speed;
     CachedProp<std::optional<std::string>> glowColor;
+    CachedProp<std::optional<double>> size;
     CachedProp<std::optional<std::vector<std::string>>> backgroundColors;
     CachedProp<std::optional<std::string>> particleColor;
     CachedProp<std::optional<bool>> showWavyBlobs;

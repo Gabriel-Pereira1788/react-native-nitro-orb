@@ -58,7 +58,7 @@ public struct OrbView: View {
                     radius: size * 0.08
                 )
             )
-        }
+        }.frame(maxWidth:viewModel.maxSize)
     }
 
     private var background: some View {

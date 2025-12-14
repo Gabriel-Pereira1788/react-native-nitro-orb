@@ -19,6 +19,7 @@ export interface NitroOrbProps extends HybridViewProps {
   preset?: PresetType
   speed?: number
   glowColor?: string
+  size?: number
   backgroundColors?: string[]
   particleColor?: string
   showWavyBlobs?: boolean

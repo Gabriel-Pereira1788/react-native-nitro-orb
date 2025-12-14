@@ -14,6 +14,7 @@ public protocol HybridNitroOrbSpec_protocol: HybridObject, HybridView {
   var preset: PresetType? { get set }
   var speed: Double? { get set }
   var glowColor: String? { get set }
+  var size: Double? { get set }
   var backgroundColors: [String]? { get set }
   var particleColor: String? { get set }
   var showWavyBlobs: Bool? { get set }

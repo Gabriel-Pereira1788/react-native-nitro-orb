@@ -20,6 +20,8 @@ namespace margelo::nitro::nitroorb {
       prototype.registerHybridSetter("speed", &HybridNitroOrbSpec::setSpeed);
       prototype.registerHybridGetter("glowColor", &HybridNitroOrbSpec::getGlowColor);
       prototype.registerHybridSetter("glowColor", &HybridNitroOrbSpec::setGlowColor);
+      prototype.registerHybridGetter("size", &HybridNitroOrbSpec::getSize);
+      prototype.registerHybridSetter("size", &HybridNitroOrbSpec::setSize);
       prototype.registerHybridGetter("backgroundColors", &HybridNitroOrbSpec::getBackgroundColors);
       prototype.registerHybridSetter("backgroundColors", &HybridNitroOrbSpec::setBackgroundColors);
       prototype.registerHybridGetter("particleColor", &HybridNitroOrbSpec::getParticleColor);

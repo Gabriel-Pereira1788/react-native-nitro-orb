@@ -54,6 +54,8 @@ namespace margelo::nitro::nitroorb {
       virtual void setSpeed(std::optional<double> speed) = 0;
       virtual std::optional<std::string> getGlowColor() = 0;
       virtual void setGlowColor(const std::optional<std::string>& glowColor) = 0;
+      virtual std::optional<double> getSize() = 0;
+      virtual void setSize(std::optional<double> size) = 0;
       virtual std::optional<std::vector<std::string>> getBackgroundColors() = 0;
       virtual void setBackgroundColors(const std::optional<std::vector<std::string>>& backgroundColors) = 0;
       virtual std::optional<std::string> getParticleColor() = 0;

@@ -172,6 +172,23 @@ open class HybridNitroOrbSpec_cxx {
     }
   }
   
+  public final var size: bridge.std__optional_double_ {
+    @inline(__always)
+    get {
+      return { () -> bridge.std__optional_double_ in
+        if let __unwrappedValue = self.__implementation.size {
+          return bridge.create_std__optional_double_(__unwrappedValue)
+        } else {
+          return .init()
+        }
+      }()
+    }
+    @inline(__always)
+    set {
+      self.__implementation.size = newValue.value
+    }
+  }
+  
   public final var backgroundColors: bridge.std__optional_std__vector_std__string__ {
     @inline(__always)
     get {

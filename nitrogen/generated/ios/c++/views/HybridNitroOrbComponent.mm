@@ -86,6 +86,11 @@ using namespace margelo::nitro::nitroorb::views;
     swiftPart.setGlowColor(newViewProps.glowColor.value);
     newViewProps.glowColor.isDirty = false;
   }
+  // size: optional
+  if (newViewProps.size.isDirty) {
+    swiftPart.setSize(newViewProps.size.value);
+    newViewProps.size.isDirty = false;
+  }
   // backgroundColors: optional
   if (newViewProps.backgroundColors.isDirty) {
     swiftPart.setBackgroundColors(newViewProps.backgroundColors.value);

@@ -55,6 +55,16 @@ namespace margelo::nitro::nitroorb::views {
         throw std::runtime_error(std::string("NitroOrb.glowColor: ") + exc.what());
       }
     }()),
+    size([&]() -> CachedProp<std::optional<double>> {
+      try {
+        const react::RawValue* rawValue = rawProps.at("size", nullptr, nullptr);
+        if (rawValue == nullptr) return sourceProps.size;
+        const auto& [runtime, value] = (std::pair<jsi::Runtime*, jsi::Value>)*rawValue;
+        return CachedProp<std::optional<double>>::fromRawValue(*runtime, value, sourceProps.size);
+      } catch (const std::exception& exc) {
+        throw std::runtime_error(std::string("NitroOrb.size: ") + exc.what());
+      }
+    }()),
     backgroundColors([&]() -> CachedProp<std::optional<std::vector<std::string>>> {
       try {
         const react::RawValue* rawValue = rawProps.at("backgroundColors", nullptr, nullptr);
@@ -141,6 +151,7 @@ namespace margelo::nitro::nitroorb::views {
     preset(other.preset),
     speed(other.speed),
     glowColor(other.glowColor),
+    size(other.size),
     backgroundColors(other.backgroundColors),
     particleColor(other.particleColor),
     showWavyBlobs(other.showWavyBlobs),
@@ -155,6 +166,7 @@ namespace margelo::nitro::nitroorb::views {
       case hashString("preset"): return true;
       case hashString("speed"): return true;
       case hashString("glowColor"): return true;
+      case hashString("size"): return true;
       case hashString("backgroundColors"): return true;
       case hashString("particleColor"): return true;
       case hashString("showWavyBlobs"): return true;

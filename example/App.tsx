@@ -6,7 +6,7 @@ function App(): React.JSX.Element {
   const [isGenerating, setIsGenerating] = useState(false)
   return (
     <View style={styles.container}>
-      <NitroOrb preset='minimal' speed={20} style={styles.view} testID="nitro-orb" />
+      <NitroOrb preset='minimal' size={100} speed={20} style={styles.view} testID="nitro-orb" />
 
       <Button title="Generate" onPress={() => setIsGenerating(prev => !prev)} />
     </View>

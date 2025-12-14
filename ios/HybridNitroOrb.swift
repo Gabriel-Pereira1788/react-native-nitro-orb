@@ -13,6 +13,27 @@ class HybridNitroOrb : HybridNitroOrbSpec {
     var viewModel = OrbViewModel()
     var config = OrbConfiguration()
     
+    var view: UIView = UIView()
+    var swiftUIView: any View
+    override init () {
+        self.viewModel.setOrbConfiguration(self.config)
+        self.swiftUIView = OrbView(viewModel: self.viewModel)
+            .aspectRatio(1, contentMode: .fit)
+        super.init()
+        view = SwiftUIViewWrapper(rootView: self.swiftUIView)
+        
+    }
+    
+    var size: Double? {
+        didSet {
+            guard let size = size else {
+                return
+            }
+            
+            self.viewModel.setSize(size)
+        }
+    }
+    
     var backgroundColors: [String]? {
         didSet {
             guard let backgroundColors, !backgroundColors.isEmpty else {
@@ -123,74 +144,63 @@ class HybridNitroOrb : HybridNitroOrbSpec {
         }
     }
     
-    var view: UIView = UIView()
-    override init () {
-        super.init()
-        self.viewModel.setOrbConfiguration(self.config)
-        let swiftUIView =  OrbView(viewModel: self.viewModel)
-            .aspectRatio(1, contentMode: .fit)
-            .frame(maxWidth: 120)
-        view = SwiftUIViewWrapper(rootView: swiftUIView)
-        
-    }
-    
     private func updateViewConfig() {
         self.viewModel.setOrbConfiguration(self.config)
     }
     
     private func setPreset(_ preset: PresetType) {
         switch preset {
-
+            
         case .mystic:
             self.config.backgroundColors = [.purple, .blue, .indigo]
             self.config.glowColor = .purple
             self.config.coreGlowIntensity = 1.2
-
+            
         case .nature:
             self.config.backgroundColors = [.green, .mint, .teal]
             self.config.glowColor = .green
             self.config.coreGlowIntensity = 1.0
-
+            
         case .sunset:
             self.config.backgroundColors = [.orange, .red, .pink]
             self.config.glowColor = .orange
             self.config.coreGlowIntensity = 0.8
-
+            
         case .ocean:
             self.config.backgroundColors = [.blue, .cyan, .teal]
             self.config.glowColor = .cyan
-
+            
         case .minimal:
             self.config.backgroundColors = [.gray, .white]
             self.config.glowColor = .white
             self.config.showWavyBlobs = false
             self.config.showParticles = false
-
+            
         case .cosmic:
             self.config.backgroundColors = [.purple, .pink, .blue]
             self.config.glowColor = .white
             self.config.coreGlowIntensity = 1.5
-
+            
         case .fire:
             self.config.backgroundColors = [.red, .orange, .yellow]
             self.config.glowColor = .orange
             self.config.coreGlowIntensity = 1.3
-
+            
         case .arctic:
             self.config.backgroundColors = [.cyan, .white, .blue]
             self.config.glowColor = .white
             self.config.coreGlowIntensity = 0.75
             self.config.showParticles = true
-
+            
         case .shadow:
             self.config.backgroundColors = [.black, .gray]
             self.config.glowColor = .gray
             self.config.coreGlowIntensity = 0.7
             self.config.showParticles = false
         }
-
+        
         self.updateViewConfig()
     }
-
+    
     
 }

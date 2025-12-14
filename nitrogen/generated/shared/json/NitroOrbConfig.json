@@ -7,6 +7,7 @@
     "preset": true,
     "speed": true,
     "glowColor": true,
+    "size": true,
     "backgroundColors": true,
     "particleColor": true,
     "showWavyBlobs": true,
