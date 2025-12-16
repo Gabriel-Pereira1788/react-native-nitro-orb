@@ -27,39 +27,18 @@ const presets = [
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <ScrollView
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        <Text style={styles.title}>NitroOrb Presets</Text>
-
-        <View style={styles.grid}>
-          {presets.slice(0,1).map((preset) => (
-            <View key={preset} style={styles.orbContainer}>
-              <View style={styles.orbWrapper}>
-                <NitroOrb
-                  preset={preset}
-                  size={orbSize}
-                  speed={90}
-                  style={[styles.orb, { width: orbSize, height: orbSize }]}
-                  showWavyBlobs={true}
-                  showParticles={true}
-                  showGlowEffects={true}
-                  showShadow={true}
-                  coreGlowItensity={1.0}
-                />
-              </View>
-              <Text style={styles.presetLabel}>{preset}</Text>
-            </View>
-          ))}
-        </View>
-
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>
-            Each orb showcases a unique preset theme
-          </Text>
-        </View>
-      </ScrollView>
+      <View style={styles.orbWrapper}>
+        <NitroOrb
+          size={150}
+          speed={90}
+          style={[styles.orb, { width: 150, height: 200 }]}
+          showWavyBlobs={true}
+          showParticles={true}
+          showGlowEffects={true}
+          showShadow={true}
+          coreGlowItensity={1.0}
+        />
+      </View>
     </SafeAreaView>
   )
 }
@@ -67,7 +46,9 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // backgroundColor: '#0a0a0a',
   },
   scrollContent: {
     paddingVertical: 20,
@@ -85,7 +66,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     paddingHorizontal: 15,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
   orbContainer: {
     width: '31%',
@@ -93,9 +76,10 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   orbWrapper: {
-    backgroundColor: '#1a1a1a',
+    // backgroundColor: '#1a1a1a',
     borderRadius: 20,
     padding: 10,
+
     marginBottom: 8,
     shadowColor: '#000',
     shadowOffset: {
@@ -110,7 +94,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   presetLabel: {
-    color: '#ffffff',
+    color: '#1a1a1a',
     fontSize: 14,
     fontWeight: '600',
     textTransform: 'capitalize',
