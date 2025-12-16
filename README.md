@@ -1,4 +1,9 @@
-# react-native-nitro-orb
+# react-native-nitro-orb 🔮
+
+
+https://github.com/user-attachments/assets/5bb6bb3a-9338-4304-a410-be4e5414d513
+
+
 
 A high-performance, animated orb component for React Native built with Nitro Modules and SwiftUI. This library renders a beautiful, customizable animated orb with various visual effects including glowing, particles, wavy blobs, and dynamic shadows.
 
@@ -94,6 +99,7 @@ const styles = StyleSheet.create({
 | `testID` | `string` | - | Test identifier for testing |
 
 ## Presets
+<img width="420" height="900" alt="Simulator Screenshot - iPhone 16 - 2025-12-16 at 12 19 16" src="https://github.com/user-attachments/assets/40c507f9-1f60-449e-85d7-5f3b84c07f3e" />
 
 The component includes 9 beautiful pre-configured themes:
 
